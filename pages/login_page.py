@@ -26,8 +26,7 @@ class LoginPage:
     def click_login(self):
         self.driver.find_element(*self.login_btn).click()
 
-        wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.presence_of_element_located(self.logout_btn))
-
     def verify_login(self):
-        return self.driver.find_element(*self.logout_btn).is_displayed()
+        wait = WebDriverWait(self.driver, 10)
+        element = wait.until(EC.presence_of_element_located(self.verify_login_name))
+        return element.is_displayed()
