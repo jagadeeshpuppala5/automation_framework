@@ -1,5 +1,12 @@
 venv/
 __pycache__/
 *.pyc
+*.log
+
+reports/
+screenshots/
+
 .idea/
 .vscode/
+
+.env
